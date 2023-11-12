@@ -13,6 +13,6 @@
 
 - It's a static Web-App.
 - run `npm start` to start the server locally.
-- gallery, my-comic, add-image are the 3 components.
-- gallery always stays mounted. my-comic & add-image can get unmounted, their state is inherited from the parent.
+- _gallery_, _my-comic_, & _add-image_ are the 3 components that make up this app.
+- _gallery_ always stays mounted. _my-comic_ & _add-image_ can get unmounted, their state is inherited from the parent.
 
