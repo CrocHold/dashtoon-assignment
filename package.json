@@ -1,7 +1,7 @@
 {
   "name": "dashtoon-assignment",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
@@ -22,7 +22,7 @@
     "web-vitals": "^2.1.4",
     "yet-another-react-lightbox": "^3.15.1"
   },
-  "homepage": "https://crochold.github.io/",
+  "homepage": "https://crochold.github.io/dashtoon-assignment",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
