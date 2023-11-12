@@ -17,7 +17,7 @@ export default function Gallery({selected, setSelected}) {
              const imgData = canvas.toDataURL('image/png');
              const downloadLink = document.createElement('a');
               downloadLink.href = imgData;
-              downloadLink.download = 'component.png';
+              downloadLink.download = 'MyComic.png';
               document.body.appendChild(downloadLink);
               downloadLink.click();
                 document.body.removeChild(downloadLink);
@@ -31,7 +31,7 @@ export default function Gallery({selected, setSelected}) {
     }
     return (
         <>
-        <div ref={containerRef} style={{display: 'flex', flexWrap: 'wrap', marginLeft: '1%', marginRight: '%'}}>
+        <div ref={containerRef} style={{display: 'flex', flexWrap: 'wrap', marginLeft: '1%'}}>
             {
                 selected.map((slide, index) => (
                     <img src={slide.src} alt="Broken" 
@@ -40,8 +40,7 @@ export default function Gallery({selected, setSelected}) {
                         maxWidth: '300px',
                        maxHeight: '200px',
                      height: 'auto',
-                      marginLeft: '1%',
-                      marginRight: '1%',
+                      marginRight: '10px',
                      margin: '1%'
                      }}
                     />
@@ -51,8 +50,8 @@ export default function Gallery({selected, setSelected}) {
             {
                 selected.length > 0 ? 
                 <form onSubmit={handleSubmit}>
-                    <input type="submit" onClick={() => {wasClicked = 'remove'}} value = "Remove Last Image" />
-                    <input type="submit" onClick={() => {wasClicked = 'download'}} value = "Download pdf" />
+                    <input type="submit" onClick={() => {wasClicked = 'remove'}} value = "Remove Last Image" style={{marginRight : '1%'}}/>
+                    <input type="submit" onClick={() => {wasClicked = 'download'}} value = "Download comic" />
                 </form>
                 : "Empty Comic"
              }

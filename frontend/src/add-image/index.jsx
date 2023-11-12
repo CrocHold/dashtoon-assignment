@@ -83,8 +83,8 @@ export default function AddImage({setSlides, slides, apiBusy, setApiBusy, pendin
                               }}
                     />
                     <br />
-                    <input type="submit" name = "action2" onClick={() => {wasClicked = "keep"}} value = "Keep"/>
-                    <input type="submit" name = "action3" onClick={() => {wasClicked = "discard"}} value = "Discard"/>
+                    <input type="submit" name = "action2" onClick={() => {wasClicked = "keep"}} value = "Keep" style={{marginRight : '1%'}}/>
+                    <input type="submit" name = "action3" onClick={() => {wasClicked = "discard"}} value = "Discard" style={{marginRight : '1%'}}/>
                     <input type="submit" name = "action4" onClick={() => {wasClicked = "report"}} value = "Report" />
                 </div>
                 }

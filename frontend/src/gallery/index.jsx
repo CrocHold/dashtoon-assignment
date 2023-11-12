@@ -54,7 +54,7 @@ return (
     <br />
     {
       slides.length > 0 ?
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} style={{margin : '1%'}}>
         <input type="submit" value = "Add This Image"/>
       </form>
       : null
