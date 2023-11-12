@@ -1,5 +1,6 @@
 # User's Guide
 
+- [Link to Web-App](https://crochold.github.io/dashtoon-assignment/)
 - Closing/ Reloading the page will result in data loss.
 - Switch between the 2 tabs as needed, 'Image Generator' & 'My Comic'.
 - 'Image Generator' tab won't accept new requests until the last one is completed.
