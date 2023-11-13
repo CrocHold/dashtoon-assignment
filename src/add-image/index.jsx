@@ -4,21 +4,33 @@ import React from 'react';
 export default function AddImage({setSlides, slides, apiBusy, setApiBusy, pending, setPending, imageURL, setImageURL, description, setDescription}) {
     let wasClicked;
   
+    const API_KEY = process.env.REACT_APP_API_KEY; // export the env var
+
     async function query(data) {
-        const response = await fetch(
-            "https://xdwvg9no7pefghrn.us-east-1.aws.endpoints.huggingface.cloud",
-            {
-                headers: { 
-                    "Accept": "image/png",
-                    "Authorization": "Bearer VknySbLLTUjbxXAXCjyfaFIPwUTCeRXbFSOjwRiCxsxFyhbnGjSFalPKrpvvDAaPVzWEevPljilLVDBiTzfIbWFdxOkYJxnOPoHhkkVGzAknaOulWggusSFewzpqsNWM", 
-                    "Content-Type": "application/json" 
-                },
-                method: "POST",
-                body: JSON.stringify(data),
+        try {
+            const response = await fetch(
+                "https://xdwvg9no7pefghrn.us-east-1.aws.endpoints.huggingface.cloud",
+                {
+                    headers: { 
+                        "Accept": "image/png",
+                        "Authorization": `Bearer ${API_KEY}`,
+                        "Content-Type": "application/json" 
+                    },
+                    method: "POST",
+                    body: JSON.stringify(data),
+                }
+            );
+    
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
             }
-        );
-        const result = await response.blob();
-        return result;
+    
+            const result = await response.blob();
+            return result;
+        } catch (error) {
+            console.error("An error occurred:", error.message);
+            throw error;
+        }
     }
 
     function handleSubmit(e) {
@@ -35,6 +47,11 @@ export default function AddImage({setSlides, slides, apiBusy, setApiBusy, pendin
                 console.log(imageURL);
                 setApiBusy(false);
                 setPending(true);
+            })
+            .catch((error) => {
+                setApiBusy(false);
+                alert('Please try later!');
+                console.error("API error:", error.message);
             });
         }
         else if (wasClicked === "keep") {

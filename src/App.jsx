@@ -21,7 +21,7 @@ function App() {
       <br />
       <div>
       <button onClick={() => setAdd(true)} style={{marginRight : '1%'}}> Image Generator </button>
-      <button onClick={() => setAdd(false)}> My Comic </button>
+      <button onClick={() => setAdd(false)} disabled = {apiBusy}> My Comic </button>
       </div>
       <div style = {{marginTop: '10px', marginBottom: '10px'}}>
       {add ? <AddImage
