@@ -12,6 +12,7 @@
 # Developer's Guide
 
 - It's a static Web-App.
+- export/ set env var `API_KEY`
 - run `npm start` to start the server locally.
 - _gallery_, _my-comic_, & _add-image_ are the 3 components that make up this app.
 - _gallery_ always stays mounted. _my-comic_ & _add-image_ can get unmounted, their state is retained in the parent if they unmount.

@@ -1,10 +1,8 @@
 import React from 'react';
-
+// const API_KEY = process.env.REACT_APP_API_KEY; // export the env var
 
 export default function AddImage({setSlides, slides, apiBusy, setApiBusy, pending, setPending, imageURL, setImageURL, description, setDescription}) {
     let wasClicked;
-  
-    const API_KEY = process.env.REACT_APP_API_KEY; // export the env var
 
     async function query(data) {
         try {
@@ -13,7 +11,7 @@ export default function AddImage({setSlides, slides, apiBusy, setApiBusy, pendin
                 {
                     headers: { 
                         "Accept": "image/png",
-                        "Authorization": `Bearer ${API_KEY}`,
+                        "Authorization": "Bearer VknySbLLTUjbxXAXCjyfaFIPwUTCeRXbFSOjwRiCxsxFyhbnGjSFalPKrpvvDAaPVzWEevPljilLVDBiTzfIbWFdxOkYJxnOPoHhkkVGzAknaOulWggusSFewzpqsNWM", 
                         "Content-Type": "application/json" 
                     },
                     method: "POST",
