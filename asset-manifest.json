@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dashtoon-assignment/static/css/main.fc7eb541.css",
-    "main.js": "/dashtoon-assignment/static/js/main.76e3d229.js",
+    "main.js": "/dashtoon-assignment/static/js/main.71ea8b6f.js",
     "static/js/787.17124520.chunk.js": "/dashtoon-assignment/static/js/787.17124520.chunk.js",
     "static/media/slick.svg": "/dashtoon-assignment/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/dashtoon-assignment/static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -9,11 +9,11 @@
     "static/media/slick.woff": "/dashtoon-assignment/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/dashtoon-assignment/index.html",
     "main.fc7eb541.css.map": "/dashtoon-assignment/static/css/main.fc7eb541.css.map",
-    "main.76e3d229.js.map": "/dashtoon-assignment/static/js/main.76e3d229.js.map",
+    "main.71ea8b6f.js.map": "/dashtoon-assignment/static/js/main.71ea8b6f.js.map",
     "787.17124520.chunk.js.map": "/dashtoon-assignment/static/js/787.17124520.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fc7eb541.css",
-    "static/js/main.76e3d229.js"
+    "static/js/main.71ea8b6f.js"
   ]
 }
